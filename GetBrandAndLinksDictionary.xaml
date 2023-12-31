@@ -94,7 +94,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="This sequence iterates over every file in the Brands folder and parses the text into a Dictionary where the key is the file name without its extension and the value is a list of product URLs" DisplayName="Sequence to get brand URLs from text files and create dictionary" sap:VirtualizedContainerService.HintSize="592,1336" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap2010:Annotation.AnnotationText="This sequence iterates over every file in the Brands folder and parses the text into a Dictionary where the key is the file name without its extension and the value is a list of product URLs." DisplayName="Sequence to get brand URLs from text files and create dictionary" sap:VirtualizedContainerService.HintSize="592,1336" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" Name="Links">
         <Variable.Default>
