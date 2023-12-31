@@ -141,7 +141,7 @@
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:BuildDataTable DataTable="[dt_Products]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1030,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Link&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;300&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:decimal&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Date_x0020_Checked&quot; msdata:Caption=&quot;&quot; type=&quot;xs:dateTime&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+            <ui:BuildDataTable DataTable="[dt_Products]" DisplayName="Build Products Data Table" sap:VirtualizedContainerService.HintSize="1030,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Link&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;300&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:decimal&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Date_x0020_Checked&quot; msdata:Caption=&quot;&quot; type=&quot;xs:dateTime&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
             <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Link in the PLouise Dictionary" sap:VirtualizedContainerService.HintSize="1030,2470.6666666666665" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Links(&quot;PLouise&quot;)]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
@@ -152,7 +152,7 @@
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Price" />
                       <Variable x:TypeArguments="x:String" Name="Name" />
-                      <Variable x:TypeArguments="sd:DataRow" Default="[dt_Products.NewRow()]" Name="dr_Product" />
+                      <Variable x:TypeArguments="sd:DataRow" Default="[dt_Products.NewRow()]" Name="dt_ProductRow" />
                     </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -174,25 +174,7 @@
                       </ui:RetryScope.ActivityBody>
                       <ui:RetryScope.Condition>
                         <ActivityFunc x:TypeArguments="x:Boolean">
-                          <uix:NCheckState DisplayName="Check App State to see if product name has loaded" EnableIfExists="False" EnableIfNotExists="False" sap:VirtualizedContainerService.HintSize="334,181.33333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e4c05e2b-2118-40f2-8336-f5f5f540b9be" Timeout="30" Version="V3">
-                            <uix:NCheckState.IfExists>
-                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </Sequence>
-                            </uix:NCheckState.IfExists>
-                            <uix:NCheckState.IfNotExists>
-                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                                <sap:WorkflowViewStateService.ViewState>
-                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                  </scg:Dictionary>
-                                </sap:WorkflowViewStateService.ViewState>
-                              </Sequence>
-                            </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState DisplayName="Check App State to see if product name has loaded" sap:VirtualizedContainerService.HintSize="554,254.66666666666663" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e4c05e2b-2118-40f2-8336-f5f5f540b9be" Timeout="30" Version="V3">
                             <uix:NCheckState.Target>
                               <uix:TargetAnchorable BrowserURL="https://plouise.co.uk/collections/p-louise-x-mikayla/products/p-louise-x-mikayla-full-collection" DesignTimeRectangle="779, 371, 588, 27" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'P.Louise x'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='t4s-product__title' /&gt;" Guid="5c60fe6d-3f8a-42d6-be94-2d7f81426ca1" ImageBase64="" InformativeScreenshot="e2c83f0e0dda15f0fc2bf7fc05db0810.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='P.Louise x Mikayla Full Collection – P. Louise Cosmetics' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                             </uix:NCheckState.Target>
@@ -266,7 +248,7 @@
                     </uix:NGetText>
                     <Assign DisplayName="Initialise data row variable" sap:VirtualizedContainerService.HintSize="954,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
                       <Assign.To>
-                        <OutArgument x:TypeArguments="sd:DataRow">[dr_Product]</OutArgument>
+                        <OutArgument x:TypeArguments="sd:DataRow">[dt_ProductRow]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="sd:DataRow">[dt_Products.NewRow()]</InArgument>
@@ -277,7 +259,7 @@
                         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
                             <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:Object">[dr_Product("Name")]</OutArgument>
+                              <OutArgument x:TypeArguments="x:Object">[dt_ProductRow("Name")]</OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:Object">[Name]</InArgument>
@@ -285,7 +267,7 @@
                           </ui:AssignOperation>
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
                             <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:Object">[dr_Product("Link")]</OutArgument>
+                              <OutArgument x:TypeArguments="x:Object">[dt_ProductRow("Link")]</OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:Object">[Link]</InArgument>
@@ -293,7 +275,7 @@
                           </ui:AssignOperation>
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
                             <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:Object">[dr_Product("Price")]</OutArgument>
+                              <OutArgument x:TypeArguments="x:Object">[dt_ProductRow("Price")]</OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:Object">[Price.Replace("£", "")]</InArgument>
@@ -301,7 +283,7 @@
                           </ui:AssignOperation>
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
                             <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:Object">[dr_Product("Date Checked")]</OutArgument>
+                              <OutArgument x:TypeArguments="x:Object">[dt_ProductRow("Date Checked")]</OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:Object">[Date.Now]</InArgument>
@@ -310,7 +292,7 @@
                         </scg:List>
                       </ui:MultipleAssign.AssignOperations>
                     </ui:MultipleAssign>
-                    <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[dr_Product]" DataTable="[dt_Products]" DisplayName="Add product data row to data table" sap:VirtualizedContainerService.HintSize="954,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                    <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[dt_ProductRow]" DataTable="[dt_Products]" DisplayName="Add product data row to data table" sap:VirtualizedContainerService.HintSize="954,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                     <Assign DisplayName="Assign products data table to out argument" sap:VirtualizedContainerService.HintSize="954,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
                       <Assign.To>
                         <OutArgument x:TypeArguments="sd:DataTable">[out_dt_Products]</OutArgument>
