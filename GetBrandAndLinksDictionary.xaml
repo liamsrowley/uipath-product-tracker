@@ -96,11 +96,7 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="This sequence iterates over every file in the Brands folder and parses the text into a Dictionary where the key is the file name without its extension and the value is a list of product URLs." DisplayName="Sequence to get brand URLs from text files and create dictionary" sap:VirtualizedContainerService.HintSize="592,1336" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
-      <Variable x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" Name="Links">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" ExpressionText="new DIctionary(Of string, List(Of string))" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, scg:List(x:String))" Default="[new DIctionary(Of string, List(Of string))]" Name="Links" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -108,7 +104,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEachFileX DisplayName="For Each Brand File in 'Brands' Folder" Folder="Brands" sap:VirtualizedContainerService.HintSize="530,1054.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+    <ui:ForEachFileX DisplayName="For Each Brand File in 'Brands' Folder" Folder="[Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + &quot;/ProductTracker/Brands&quot;]" sap:VirtualizedContainerService.HintSize="530,1054.6666666666667" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
       <ui:ForEachFileX.Body>
         <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
           <ActivityAction.Argument1>
