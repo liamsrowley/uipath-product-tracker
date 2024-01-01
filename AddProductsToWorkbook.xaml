@@ -2,6 +2,7 @@
   <x:Members>
     <x:Property Name="in_dt_Products" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_BrandName" Type="InArgument(x:String)" />
+    <x:Property Name="in_BrandsDirectory" Type="InArgument(x:String)" />
   </x:Members>
   <sap:VirtualizedContainerService.HintSize>1254,2231.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -123,7 +124,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Products Excel File" sap:VirtualizedContainerService.HintSize="535.3333333333334,1923.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" KeepExcelFileOpen="True" ResizeWindow="None" TemplatePath="Products.xlsx" UseTemplate="True" WorkbookPath="[Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + &quot;/ProductTracker/Products.xlsx&quot;]">
+          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Products Excel File" sap:VirtualizedContainerService.HintSize="535.3333333333334,1923.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" KeepExcelFileOpen="True" ResizeWindow="None" TemplatePath="Products.xlsx" UseTemplate="True" WorkbookPath="[in_BrandsDirectory + &quot;/Products.xlsx&quot;]">
             <ueab:ExcelApplicationCard.Body>
               <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                 <ActivityAction.Argument>
