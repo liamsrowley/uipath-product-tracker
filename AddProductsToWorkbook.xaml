@@ -3,7 +3,7 @@
     <x:Property Name="in_dt_Products" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_BrandName" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1254,2046.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1254,2231.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -110,26 +110,26 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Reads the Products Excel file in the special Documents folder, writes the header cells, appends the data table to the sheet and then formats the cells to fit the data" DisplayName="Sequence to add products data table to Products Excel file" sap:VirtualizedContainerService.HintSize="631.3333333333334,1982" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="Reads the Products Excel file in the special Documents folder, writes the header cells, appends the data table to the sheet and then formats the cells to fit the data" DisplayName="Sequence to add products data table to Products Excel file" sap:VirtualizedContainerService.HintSize="631.3333333333334,2166.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope - Products" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="569.3333333333334,1826" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ProcessMode="ReuseIfExists" ShowExcelWindow="True">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" DisplayName="Excel Process Scope - Products" ExistingProcessAction="ForceKill" sap:VirtualizedContainerService.HintSize="569.3333333333334,2010.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1" ProcessMode="ReuseIfExists" ShowExcelWindow="True">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
           </ActivityAction.Argument>
-          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Products Excel File" sap:VirtualizedContainerService.HintSize="535.3333333333334,1738.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" KeepExcelFileOpen="True" ResizeWindow="None" TemplatePath="Products.xlsx" UseTemplate="True" WorkbookPath="[Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + &quot;/Products.xlsx&quot;]">
+          <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Products Excel File" sap:VirtualizedContainerService.HintSize="535.3333333333334,1923.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" KeepExcelFileOpen="True" ResizeWindow="None" TemplatePath="Products.xlsx" UseTemplate="True" WorkbookPath="[Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + &quot;/Products.xlsx&quot;]">
             <ueab:ExcelApplicationCard.Body>
               <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Products" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="501.3333333333333,1435.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="501.3333333333333,1620" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -152,6 +152,7 @@
                     </ueab:FormatRangeX.Format>
                   </ueab:FormatRangeX>
                   <ueab:AutoFitX Columns="True" DisplayName="Autofit all columns" sap:VirtualizedContainerService.HintSize="439.3333333333333,120" sap2010:WorkflowViewState.IdRef="AutoFitX_2" Range="[Products.Sheet(in_BrandName)]" Rows="False" />
+                  <ui:LogMessage DisplayName="Log Message - Products written to Excel" sap:VirtualizedContainerService.HintSize="439.3333333333333,144.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Products written to file successfully&quot;]" />
                 </Sequence>
               </ActivityAction>
             </ueab:ExcelApplicationCard.Body>
