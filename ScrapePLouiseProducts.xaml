@@ -1,9 +1,9 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="ScrapePLouiseProducts" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="in_Links" Type="InArgument(scg:Dictionary(x:String, scg:List(x:String)))" />
+    <x:Property Name="in_Links" Type="InArgument(scg:List(x:String))" />
     <x:Property Name="out_dt_Products" Type="OutArgument(sd:DataTable)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1254,3160</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1254,3233.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -117,7 +117,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="Iterates over each product link in the dictionary and scrapes the price from the page.&#xA;&#xA;Checks if a product is on sale and scrapes the price using the approriate selector.&#xA;" DisplayName="Sequence to scrape product prices from PLouise website" sap:VirtualizedContainerService.HintSize="1188,3095.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap2010:Annotation.AnnotationText="Iterates over each product link in the dictionary and scrapes the price from the page.&#xA;&#xA;Checks if a product is on sale and scrapes the price using the approriate selector.&#xA;" DisplayName="Sequence to scrape product prices from PLouise website" sap:VirtualizedContainerService.HintSize="1188,3168.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -125,13 +125,13 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: P.Louise Beauty and Makeup Products | Home Of P.Louise Makeup Academy – P. Louis" sap:VirtualizedContainerService.HintSize="1126,2906" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="e4c05e2b-2118-40f2-8336-f5f5f540b9be" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="IfOpenedByAppBrowser" DisplayName="Use Browser Chrome: P.Louise Beauty and Makeup Products | Home Of P.Louise Makeup Academy – P. Louis" sap:VirtualizedContainerService.HintSize="1126,2979.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="e4c05e2b-2118-40f2-8336-f5f5f540b9be" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1092,2686.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1092,2760" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="dt_Products" />
             </Sequence.Variables>
@@ -142,13 +142,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:BuildDataTable DataTable="[dt_Products]" DisplayName="Build Products Data Table" sap:VirtualizedContainerService.HintSize="1030,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Link&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;300&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:decimal&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Date_x0020_Checked&quot; msdata:Caption=&quot;&quot; type=&quot;xs:dateTime&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Link in the PLouise Dictionary" sap:VirtualizedContainerService.HintSize="1030,2470.6666666666665" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Links(&quot;PLouise&quot;)]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each Link in the PLouise Dictionary" sap:VirtualizedContainerService.HintSize="1030,2658" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Links]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="Link" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="996,2280.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="996,2468" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="Price" />
                       <Variable x:TypeArguments="x:String" Name="Name" />
@@ -159,7 +159,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:RetryScope DisplayName="Retry browser navigation if product title doesn't load" sap:VirtualizedContainerService.HintSize="954,538.6666666666666" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5" RetryInterval="5.00:00:00">
+                    <ui:RetryScope DisplayName="Retry browser navigation if product title doesn't load" sap:VirtualizedContainerService.HintSize="954,726" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="5" RetryInterval="5.00:00:00">
                       <ui:RetryScope.ActivityBody>
                         <ActivityAction>
                           <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="450,195.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_8">
@@ -174,7 +174,13 @@
                       </ui:RetryScope.ActivityBody>
                       <ui:RetryScope.Condition>
                         <ActivityFunc x:TypeArguments="x:Boolean">
-                          <uix:NCheckState DisplayName="Check App State to see if product name has loaded" sap:VirtualizedContainerService.HintSize="554,254.66666666666663" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e4c05e2b-2118-40f2-8336-f5f5f540b9be" Timeout="30" Version="V3">
+                          <uix:NCheckState DisplayName="Check App State to see if product name has loaded" sap:VirtualizedContainerService.HintSize="722,368.6666666666667" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e4c05e2b-2118-40f2-8336-f5f5f540b9be" Timeout="30" Version="V3">
+                            <uix:NCheckState.IfExists>
+                              <ui:LogMessage DisplayName="Log Message - Product Loaded" sap:VirtualizedContainerService.HintSize="334,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Product page loaded&quot;]" />
+                            </uix:NCheckState.IfExists>
+                            <uix:NCheckState.IfNotExists>
+                              <ui:LogMessage DisplayName="Log Message - Unable to load Product" sap:VirtualizedContainerService.HintSize="334,147.33333333333334" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="[UiPath.Core.Activities.LogLevel.Error]" Message="[&quot;Unable to load product page&quot;]" />
+                            </uix:NCheckState.IfNotExists>
                             <uix:NCheckState.Target>
                               <uix:TargetAnchorable BrowserURL="https://plouise.co.uk/collections/p-louise-x-mikayla/products/p-louise-x-mikayla-full-collection" DesignTimeRectangle="779, 371, 588, 27" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'P.Louise x'" FullSelectorArgument="&lt;webctrl tag='H1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' type='' class='t4s-product__title' /&gt;" Guid="5c60fe6d-3f8a-42d6-be94-2d7f81426ca1" ImageBase64="" InformativeScreenshot="e2c83f0e0dda15f0fc2bf7fc05db0810.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='P.Louise x Mikayla Full Collection – P. Louise Cosmetics' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                             </uix:NCheckState.Target>
